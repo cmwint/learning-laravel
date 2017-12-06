@@ -12,7 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $tasks = [
+        'One two',
+        'buckle my shoe', 
+        'three four',
+        'shut the door'
+    ];
+
+    return view('welcome', compact('tasks'));
 });
 
 Route::get('about', function () {

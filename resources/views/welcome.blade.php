@@ -79,7 +79,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <ul>
+                        @foreach($tasks as $task)
+                            <li>{{ $task }}</li>
+                        @endforeach
+                    </ul>
                 </div>
 
                 <div class="links">
