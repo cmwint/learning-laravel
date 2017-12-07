@@ -12,12 +12,21 @@
 */
 
 
-Route::get('/', function () {
-    $tasks = DB::table('tasks')->latest()->get();
+// standard things needed:
+//  controller => PostsController
+//  eloquent model => post (singular)
+//  migration => create_posts_table
+
+// when we create a model, we can also have it create the controller and the migration
+
+Route::get('/', 'PostsController@index');
+
+// Route::get('/', function () {
+//     $tasks = DB::table('tasks')->latest()->get();
     
-    // return $tasks;
-    return view('welcome', compact('tasks'));
-});
+//     // return $tasks;
+//     return view('welcome', compact('tasks'));
+// });
 
 Route::get('/tasks', 'TasksController@index');
 
