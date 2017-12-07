@@ -10,27 +10,3 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-use App\Task; // namespace, directoy structure
-
-Route::get('/', function () {
-    $tasks = DB::table('tasks')->latest()->get();
-
-    // return $tasks;
-    return view('welcome', compact('tasks'));
-});
-
-Route::get('/tasks', function () {
-    // $tasks = DB::table('tasks')->find($id); // query builder
-    $tasks = Task::all(); // using eloquent in a dedicated class
-
-    // return $tasks;
-    return view('tasks.index', compact('tasks'));
-});
-
-Route::get('/tasks/{task}', function ($id) {
-    $task = Task::find($id);
-    // dd($tasks);
-    
-    return view('tasks.show', compact('task'));
-});
