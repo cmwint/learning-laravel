@@ -11,7 +11,7 @@
 |
 */
 
-use App\Task;
+use App\Task; // namespace, directoy structure
 
 Route::get('/', function () {
     $tasks = DB::table('tasks')->latest()->get();
@@ -21,7 +21,8 @@ Route::get('/', function () {
 });
 
 Route::get('/tasks', function () {
-    $tasks = Task::all();
+    // $tasks = DB::table('tasks')->find($id); // query builder
+    $tasks = Task::all(); // using eloquent in a dedicated class
 
     // return $tasks;
     return view('tasks.index', compact('tasks'));
