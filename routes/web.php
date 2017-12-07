@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('tasks', 'TasksController@index');
+
 use App\Task; // namespace, directoy structure, import task class
 
 Route::get('/', function () {
@@ -18,14 +20,6 @@ Route::get('/', function () {
 
     // return $tasks;
     return view('welcome', compact('tasks'));
-});
-
-Route::get('/tasks', function () {
-    // $tasks = DB::table('tasks')->find($id); // query builder
-    $tasks = Task::all(); // using eloquent in a dedicated class
-
-    // return $tasks;
-    return view('tasks.index', compact('tasks'));
 });
 
 Route::get('/tasks/{task}', function ($id) {

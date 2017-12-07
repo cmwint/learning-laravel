@@ -14,7 +14,7 @@ class Task extends Model
 
         // a query scope is just a wrapper around a particular query
         // allows you to write things like this in PHP artisan tinker
-            //App\Task::incomplete()->where('id', '>=', 2)->get();
+        //      App\Task::incomplete()->where('id', '>=', 2)->get();
 
     }
 }
