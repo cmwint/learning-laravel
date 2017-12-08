@@ -1,0 +1,17 @@
+/*
+ * 
+ * Posts css
+ * 
+ */
+
+.posts-container {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+    .posts-container {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }   
+}

@@ -21,7 +21,24 @@
 
 Route::get('/', 'PostsController@index');
 
-Route::get('/posts/{posts}', 'PostsController@show');
+Route::get('/posts/create', 'PostsController@create');
+
+Route::post('/posts', 'PostsController@store');
+
+// Route::get('/posts/{posts}', 'PostsController@show');
+
+
+// posts convention, using the exact same URI to represent different actions, use REQUEST type to instruct the server where to direct the request
+
+// GET /posts
+// GET /posts/create
+// POST /posts
+// GET /posts/{id}/edit
+// GET /posts/{id}
+// PATCH /posts/{id}
+// DELETE /posts/{id}
+
+
 
 // Route::get('/', function () {
 //     $tasks = DB::table('tasks')->latest()->get();

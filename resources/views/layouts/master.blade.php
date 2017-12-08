@@ -10,13 +10,14 @@
         <title>Blog Home - Learning Laravel</title>
 
         <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/posts.css">
 
     </head>
     <body>
 
         @include('layouts.nav')
 
-            <div class="container">
+            <div class="container posts-container">
 
                 <div class="row">
 
