@@ -35,6 +35,12 @@ class PostsController extends Controller
         // save it to the database
         // $post->save();
 
+        // vaildation
+        $this->validate(request(), [
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+
         // mass assigning all of the fields, security concern
         // can't let the user just submit whatever they want
         Post::create([
